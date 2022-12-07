@@ -1,4 +1,4 @@
-import { createWriteStream, promises as fs } from "fs";
+import { createWriteStream, existsSync, promises as fs } from "fs";
 import * as path from "path";
 import { Node, Graph } from "./graph";
 
@@ -34,7 +34,11 @@ async function main() {
   });
   allCombinations.shift();
 
-  await fs.rm(path.join(process.cwd(), "data", "output.txt"));
+  if (existsSync(path.join(process.cwd(), "data", "output.txt"))) {
+    await fs.rm(path.join(process.cwd(), "data", "output.txt"));
+  }
+  
+  fs.unlink
   const outputFile = createWriteStream(
     path.join(process.cwd(), "data", "output.txt"),
     {

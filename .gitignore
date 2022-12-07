@@ -2,3 +2,5 @@ build
 node_modules
 data/output.txt
 data/input.txt
+.idea
+.DS_Store
