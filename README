@@ -1,0 +1,18 @@
+* Program został napisany przy użyciu środowiska uruchomieniowego Node.js i nadzbioru języka JavaScript - TypeScript
+* Do uruchomienia tego programu wymagane jest posiadanie zainstalowanego Node.js min. wersja 12
+
+! Jak uruchomić program?
+1. Otworzyć terminal, powershell lub cmd (w zależnosci od platformy)
+2. Przejść do głównego katalogu tego programu
+3. Uruchomić polecenie npm install
+4. Wprowadzić dane do pliku data/input.txt
+5. Uruchomić polecenie npm run start
+6. Rezultat działania programu można znaleźć w pliku data/output.txt
+
+! Gdzie znajdę kod?
+Cała zawartość kodu znajduje się w katalogu src. Wszystkie inne pliki są plikami konfiguracyjnymi.
+
+! Sposób rozwiązania
+Zadanie zostało rozwiązane używając algorytmu Dijstry opracowanego przez holenderskiego informatyka Edsgera Dijkstrę, służy do znajdowania najkrótszej ścieżki z pojedynczego źródła w grafie o nieujemnych wagach krawędzi.
+Mając dany graf z wyróżnionym wierzchołkiem (źródłem) algorytm znajduje odległości od źródła do wszystkich pozostałych wierzchołków. Łatwo zmodyfikować go tak, aby szukał wyłącznie (najkrótszej) ścieżki do jednego ustalonego wierzchołka, po prostu przerywając działanie w momencie dojścia do wierzchołka docelowego, bądź transponując tablicę incydencji grafu.
+Algorytm Dijkstry znajduje w grafie wszystkie najkrótsze ścieżki pomiędzy wybranym wierzchołkiem a wszystkimi pozostałymi, przy okazji wyliczając również koszt przejścia każdej z tych ścieżek.
